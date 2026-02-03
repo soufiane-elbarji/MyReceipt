@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Receipt Reader</string>
+    <string name="camera_permission_rationale">Camera access is needed to scan your receipts. Images are processed locally and never leave your device.</string>
+    <string name="scan_button">Scan Receipt</string>
+    <string name="save_button">Save</string>
+    <string name="history_title">Receipt History</string>
+    <string name="camera_title">Scan Receipt</string>
+    <string name="no_receipts">No receipts saved yet</string>
+    <string name="unknown_merchant">Unknown Merchant</string>
+    <string name="unknown_date">Date not detected</string>
+    <string name="unknown_total">Total not detected</string>
+    <string name="privacy_notice">🔒 100% Offline - Your data never leaves this device</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Eco-Responsible Receipt Scanner - AndroidManifest.xml
+    
+    ============================================================================
+    PRIVACY BY DESIGN - PERMISSION DECLARATION:
+    ============================================================================
+    
+    This manifest demonstrates Privacy by Design compliance:
+    
+    1. CAMERA Permission (REQUIRED):
+       - Needed to capture receipt images for OCR processing
+       - User is prompted for consent at runtime (Android 6.0+)
+    
+    2. INTERNET Permission (DELIBERATELY OMITTED):
+       - By NOT including android.permission.INTERNET, we provide a
+         TECHNICAL GUARANTEE that this app cannot transmit data off-device
+       - This is verifiable: users can inspect the APK manifest
+       - Compliant with Law 09-08 and GDPR data minimization principles
+    
+    3. NO Storage Permissions:
+       - We use app-private internal storage (Room database)
+       - No access to user's photos, files, or external storage
+    
+    This approach follows the "Green IT" principle: minimal footprint,
+    minimal permissions, maximum privacy protection.
+    
+    ============================================================================
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 
+        CAMERA: Required for scanning receipts.
+        This is the ONLY permission this app requests.
+    -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+        PRIVACY GUARANTEE: Notice that android.permission.INTERNET is NOT declared.
+        This means the app CANNOT make any network requests whatsoever.
+        All OCR processing happens 100% on-device using the bundled ML Kit model.
+    -->
+
+    <application
+        android:name=".ReceiptReaderApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ReceiptReader"
+        tools:targetApi="31">
+        
+        <!--
+            android:allowBackup="false" and android:fullBackupContent="false"
+            PRIVACY: Prevents receipt data from being backed up to Google Drive.
+            User data stays exclusively on their device.
+        -->
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ReceiptReader">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
