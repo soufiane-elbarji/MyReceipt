@@ -64,13 +64,27 @@ app/build/outputs/apk/debug/app-debug.apk
 
 ## Installation
 
-### Via ADB (USB Debugging)
+The easiest way to get MyReceipt on your device is to download the latest stable APK from our GitHub Releases.
 
+[![Download MyReceipt v1.2.8](https://img.shields.io/badge/Download-APK_v1.2.8-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/soufiane-elbarji/MyReceipt/releases/latest)
+
+### How to Install
+1. **Download:** Click the button above or visit the [Releases](https://github.com/soufiane-elbarji/MyReceipt/releases) page.
+2. **Open APK:** Locate the downloaded `MyReceipt-v1.2.8.apk` in your downloads folder.
+3. **Allow Installation:** If prompted, allow your browser or file manager to "Install unknown apps."
+4. **Launch:** Open MyReceipt and start scanning!
+
+---
+
+### For Developers
+If you'd rather build it yourself or use ADB:
+
+**Via ADB (USB Debugging):**
 ```bash
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 
-### Manual Installation
+**Manual Installation:**
 
 1. Transfer `app-debug.apk` to your Android device
 2. Open the file on your device
