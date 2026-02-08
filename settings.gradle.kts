@@ -1,6 +1,6 @@
 /*
  * Eco-Responsible Receipt Scanner
- * 
+ *
  * PRIVACY BY DESIGN: This project is configured to work 100% offline.
  * No cloud services or network dependencies are included.
  */
@@ -22,4 +22,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ReceiptReader"
+
 include(":app")

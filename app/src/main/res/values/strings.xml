@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Receipt Reader</string>
+    <string name="app_name">MyReceipt</string>
     <string name="camera_permission_rationale">Camera access is needed to scan your receipts. Images are processed locally and never leave your device.</string>
     <string name="scan_button">Scan Receipt</string>
     <string name="save_button">Save</string>
